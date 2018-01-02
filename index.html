@@ -58,7 +58,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -91,12 +91,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="这是折腾一天的收获"><a href="#这是折腾一天的收获" class="headerlink" title="这是折腾一天的收获"></a>这是折腾一天的收获</h2><pre><code>我很满意
-</code></pre>
+        <h2 id="这是折腾一天的收获"><a href="#这是折腾一天的收获" class="headerlink" title="这是折腾一天的收获"></a>这是折腾一天的收获</h2><pre><code>除了访问速度有点慢之外，
+</code></pre><h2 id="从安装hexo到部署博客至github的步骤"><a href="#从安装hexo到部署博客至github的步骤" class="headerlink" title="从安装hexo到部署博客至github的步骤"></a>从安装hexo到部署博客至github的步骤</h2><p>因为我用的是arch linux，所以下步骤仅适用于部分linux</p>
+<p>首先安装hexo所需要的环境</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman-S nodejs npm git</span><br></pre></td></tr></table></figure>
+<p>然后安装hexo<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure></p>
+<p>之后创建本地网站目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir blog</span><br><span class="line">$ hexo init blog </span><br><span class="line">$ cd blog </span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<p>预览默认网站，在blog目录下执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s -g</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
+<p>之后在浏览器打开 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 就可以看到网站了</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/02/hexo的使用/" data-id="cjbxnifx6000114x32nfqtuz6" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/01/02/hexo的使用/" data-id="cjbxqfmay0001hox3e2bn5khq" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -141,7 +150,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/02/hello-world/" data-id="cjbxnifx2000014x37nioukpp" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/01/02/hello-world/" data-id="cjbxqfmas0000hox3cs2o364v" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -167,7 +176,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archiv</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a></li></ul>
     </div>
@@ -177,7 +186,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">letzter Beitrag</h3>
     <div class="widget">
       <ul>
         
