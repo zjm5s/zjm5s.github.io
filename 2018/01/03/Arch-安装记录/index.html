@@ -5,18 +5,20 @@
   
 
   
-  <title>写作记录</title>
+  <title>Arch的安装记录 | 写作记录</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="写作记录">
-<meta property="og:url" content="http://zjm5s.github.io/index.html">
+  <meta name="description" content="要我说哪个Linux发行版最适合新手，我会说Arch Linux，一个轻量级的，采用滚动更新方式的linux发行版。它简洁，现代，实用，以用户为中心。 许多linux发行版都力图做到开箱即用，能节省不少用户的配置时间。但是，这点对新手来说并没有帮助。举个例子，一个拼装模型由他人之手装好给我，我不清楚其中的结构，之后我要改装它就难了。linux的使用过程中，总避免不了对它的改动，新手在这步通常得花费">
+<meta name="keywords" content="Arch Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Arch的安装记录">
+<meta property="og:url" content="http://zjm5s.github.io/2018/01/03/Arch-安装记录/index.html">
 <meta property="og:site_name" content="写作记录">
-<meta property="og:description" content="个人博客">
+<meta property="og:description" content="要我说哪个Linux发行版最适合新手，我会说Arch Linux，一个轻量级的，采用滚动更新方式的linux发行版。它简洁，现代，实用，以用户为中心。 许多linux发行版都力图做到开箱即用，能节省不少用户的配置时间。但是，这点对新手来说并没有帮助。举个例子，一个拼装模型由他人之手装好给我，我不清楚其中的结构，之后我要改装它就难了。linux的使用过程中，总避免不了对它的改动，新手在这步通常得花费">
 <meta property="og:locale" content="zh-hk">
+<meta property="og:updated_time" content="2018-01-03T10:05:09.316Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="写作记录">
-<meta name="twitter:description" content="个人博客">
+<meta name="twitter:title" content="Arch的安装记录">
+<meta name="twitter:description" content="要我说哪个Linux发行版最适合新手，我会说Arch Linux，一个轻量级的，采用滚动更新方式的linux发行版。它简洁，现代，实用，以用户为中心。 许多linux发行版都力图做到开箱即用，能节省不少用户的配置时间。但是，这点对新手来说并没有帮助。举个例子，一个拼装模型由他人之手装好给我，我不清楚其中的结构，之后我要改装它就难了。linux的使用过程中，总避免不了对它的改动，新手在这步通常得花费">
   
     <link rel="alternate" href="/atom.xml" title="写作记录" type="application/atom+xml">
   
@@ -67,9 +69,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-Arch-安装记录" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Arch-安装记录" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/01/03/Arch-安装记录/" class="article-date">
   <time datetime="2018-01-03T07:13:12.000Z" itemprop="datePublished">2018-01-03</time>
@@ -82,8 +82,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/03/Arch-安装记录/">Arch的安装记录</a>
+    <h1 class="article-title" itemprop="name">
+      Arch的安装记录
     </h1>
   
 
@@ -106,63 +106,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-hexo的使用" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/01/02/hexo的使用/" class="article-date">
-  <time datetime="2018-01-02T12:58:25.000Z" itemprop="datePublished">2018-01-02</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/02/hexo的使用/">hexo的使用</a>
-    </h1>
+    <a href="/2018/01/02/hexo的使用/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">hexo的使用</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="这是折腾一天的收获"><a href="#这是折腾一天的收获" class="headerlink" title="这是折腾一天的收获"></a>这是折腾一天的收获</h2><p>除了访问速度有点慢之外。可以选择码云托管解决这一问题。</p>
-<h2 id="从安装hexo到部署博客至github的步骤"><a href="#从安装hexo到部署博客至github的步骤" class="headerlink" title="从安装hexo到部署博客至github的步骤"></a>从安装hexo到部署博客至github的步骤</h2><p>因为我用的是arch linux，所以下步骤仅适用于部分linux</p>
-<p>首先安装hexo所需要的环境</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman-S nodejs npm git</span><br></pre></td></tr></table></figure>
-<p>然后安装hexo<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure></p>
-<p>之后创建本地网站目录</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir blog</span><br><span class="line">$ hexo init blog </span><br><span class="line">$ cd blog </span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
-<p>预览默认网站，在blog目录下执行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s -g</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
-<p>之后在浏览器打开 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 就可以看到网站了。这仅仅是本地能够访问的网站，要让别人的电脑也能访问，还要把它部署到github上。考虑这涉及到本地git与github的连接，后面我再补充</p>
-<p>安装 hexo-deployer-git<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
-<p>修改配置 用vim打开_config.yml编辑。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: &lt;repository url&gt;</span><br><span class="line">  branch: [branch]</span><br></pre></td></tr></table></figure></p>
-<p>之后再运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br><span class="line">//也可以用</span><br><span class="line">$ hexo d -g</span><br></pre></td></tr></table></figure></p>
-<p>这样就可以通过 example.github.io 访问到hexo博客了</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://zjm5s.github.io/2018/01/02/hexo的使用/" data-id="cjbywcqs20001k6x33jjlxpo8" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
-
-
-  
-
 
 </section>
         
