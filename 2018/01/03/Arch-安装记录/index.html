@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Arch的安装记录 | 回首——备忘录</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="要我说哪个Linux发行版最适合新手，我会说Arch Linux，一个轻量级的，采用滚动更新方式的linux发行版。它简洁，现代，实用，以用户为中心。 许多linux发行版都力图做到开箱即用，能节省不少用户的配置时间。但是，这点对新手来说并没有帮助。举个例子，一个拼装模型由他人之手装好给我，我不清楚其中的结构，之后我要改装它就难了。linux的使用过程中，总避免不了对它的改动，新手在这步通常得花费">
+<meta name="keywords" content="Arch Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Arch的安装记录">
+<meta property="og:url" content="http://zjm5s.github.io/2018/01/03/Arch-安装记录/index.html">
+<meta property="og:site_name" content="回首——备忘录">
+<meta property="og:description" content="要我说哪个Linux发行版最适合新手，我会说Arch Linux，一个轻量级的，采用滚动更新方式的linux发行版。它简洁，现代，实用，以用户为中心。 许多linux发行版都力图做到开箱即用，能节省不少用户的配置时间。但是，这点对新手来说并没有帮助。举个例子，一个拼装模型由他人之手装好给我，我不清楚其中的结构，之后我要改装它就难了。linux的使用过程中，总避免不了对它的改动，新手在这步通常得花费">
+<meta property="og:locale" content="zh-hk">
+<meta property="og:updated_time" content="2018-01-09T05:52:18.787Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Arch的安装记录">
+<meta name="twitter:description" content="要我说哪个Linux发行版最适合新手，我会说Arch Linux，一个轻量级的，采用滚动更新方式的linux发行版。它简洁，现代，实用，以用户为中心。 许多linux发行版都力图做到开箱即用，能节省不少用户的配置时间。但是，这点对新手来说并没有帮助。举个例子，一个拼装模型由他人之手装好给我，我不清楚其中的结构，之后我要改装它就难了。linux的使用过程中，总避免不了对它的改动，新手在这步通常得花费">
+  
+    <link rel="alternate" href="/atom.xml" title="回首——备忘录" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">回首——备忘录</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">时间切片</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Buscar"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://zjm5s.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Arch-安装记录" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/01/03/Arch-安装记录/" class="article-date">
+  <time datetime="2018-01-03T07:13:12.000Z" itemprop="datePublished">2018-01-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Arch的安装记录
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>要我说哪个Linux发行版最适合新手，我会说Arch Linux，一个轻量级的，采用滚动更新方式的linux发行版。它简洁，现代，实用，以用户为中心。</p>
+<p>许多linux发行版都力图做到开箱即用，能节省不少用户的配置时间。但是，这点对新手来说并没有帮助。举个例子，一个拼装模型由他人之手装好给我，我不清楚其中的结构，之后我要改装它就难了。linux的使用过程中，总避免不了对它的改动，新手在这步通常得花费不少时间。</p>
+<p>Arch linux则是轻量的，连图形化安装界面都省了，也就是说，从分区，安装系统，安装引导程序，全部都是以命令行的方式近行的。安装好基本系统之后，还需安装一个中意的桌面环境，才能跟黑乎乎的命令行说拜拜。请不要被如此繁琐的过程吓到而放弃，其实按照Arch wiki的指引，肯定能安装成功的。期间或许会遇到各种问题，不要浮躁，arch相比其他linux优点不多，就是帮助文档多。多看文档善搜索引擎，最终会受益良多。相信新手经过这个强制关卡，能够对linux有个基本的了解。</p>
+<p>具体的安装过程，arch wiki里很详细了，我就只记分区部分了。</p>
+<p>以前用的是fdisk分区，这次用gdisk，因为gdisk对gpt分区表支持更好。下面的是划分efi分区的例子。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># gdisk /dev/sda</span><br><span class="line"></span><br><span class="line">Command (? for help): n</span><br><span class="line">Partition number (1-128, default 1): 1</span><br><span class="line">First sector (34-250069646, default = 2048) or &#123;+-&#125;size&#123;KMGTP&#125;: </span><br><span class="line">Last sector (2048-250069646, default = 250069646) or &#123;+-&#125;size&#123;KMGTP&#125;: +200M</span><br><span class="line">Current type is &apos;Linux filesystem&apos;</span><br><span class="line"></span><br><span class="line">Hex code or GUID (L to show codes, Enter = 8300): ef00</span><br><span class="line">Changed type of partition to &apos;EFI System&apos;</span><br><span class="line"></span><br><span class="line">Command (? for help):</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://zjm5s.github.io/2018/01/03/Arch-安装记录/" data-id="cjc7brmbx0000l8f6onjjgaml" class="article-share-link">Compartir</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Arch-Linux/">Arch Linux</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/01/04/医院之行/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Nuevo</strong>
+      <div class="article-nav-title">
+        
+          医院之行
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/01/02/hexo的使用/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Viejo</strong>
+      <div class="article-nav-title">hexo的使用</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Arch-Linux/">Arch Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/琐事/">琐事</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记本/">笔记本</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Nube de Tags</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Arch-Linux/" style="font-size: 10px;">Arch Linux</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/琐事/" style="font-size: 10px;">琐事</a> <a href="/tags/笔记本/" style="font-size: 10px;">笔记本</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archivos</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Posts recientes</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/01/09/为笔记本换一颗强劲的i7/">为笔记本换一颗强劲的i7</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/04/医院之行/">医院之行</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/03/Arch-安装记录/">Arch的安装记录</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/02/hexo的使用/">hexo的使用</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 曾锦铭<br>
+      Construido por <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
