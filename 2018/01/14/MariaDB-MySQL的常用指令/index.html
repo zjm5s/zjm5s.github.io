@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="回首——备忘录">
 <meta property="og:description" content="逆水行舟，不进则退。数据库的sql增删查改都生疏了，那还了得，在这里记一下吧。 以root用户登陆1mysql -u root -p 查看所有数据库123456789MariaDB [(none)]&amp;gt; show databases;+--------------------+| Database           |+--------------------+| information_s">
 <meta property="og:locale" content="zh-hk">
-<meta property="og:updated_time" content="2018-01-14T08:52:02.000Z">
+<meta property="og:updated_time" content="2018-01-14T08:56:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MariaDB&#x2F;MySQL的常用指令">
 <meta name="twitter:description" content="逆水行舟，不进则退。数据库的sql增删查改都生疏了，那还了得，在这里记一下吧。 以root用户登陆1mysql -u root -p 查看所有数据库123456789MariaDB [(none)]&amp;gt; show databases;+--------------------+| Database           |+--------------------+| information_s">
@@ -60,7 +60,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://zjm5s.github.io"></form>
@@ -99,12 +99,12 @@
 <h4 id="查看表的字段"><a href="#查看表的字段" class="headerlink" title="查看表的字段"></a>查看表的字段</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">MariaDB [mysql]&gt; desc func</span><br><span class="line">    -&gt; ;</span><br><span class="line">+-------+------------------------------+------+-----+---------+-------+</span><br><span class="line">| Field | Type                         | Null | Key | Default | Extra |</span><br><span class="line">+-------+------------------------------+------+-----+---------+-------+</span><br><span class="line">| name  | char(64)                     | NO   | PRI |         |       |</span><br><span class="line">| ret   | tinyint(1)                   | NO   |     | 0       |       |</span><br><span class="line">| dl    | char(128)                    | NO   |     |         |       |</span><br><span class="line">| type  | enum(&apos;function&apos;,&apos;aggregate&apos;) | NO   |     | NULL    |       |</span><br><span class="line">+-------+------------------------------+------+-----+---------+-------+</span><br><span class="line">4 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
 <h4 id="查看表结构-创建表时的详细语句"><a href="#查看表结构-创建表时的详细语句" class="headerlink" title="查看表结构(创建表时的详细语句)"></a>查看表结构(创建表时的详细语句)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MariaDB [mysql]&gt; show create table func;</span><br></pre></td></tr></table></figure>
 <h4 id="创建一个数据库"><a href="#创建一个数据库" class="headerlink" title="创建一个数据库"></a>创建一个数据库</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">MariaDB [mysql]&gt; create database bookshop;</span><br><span class="line">Query OK, 1 row affected (0.00 sec)</span><br></pre></td></tr></table></figure>
-<h4 id="创建新表"><a href="#创建新表" class="headerlink" title="创建新表"></a>创建新表</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">MariaDB [mysql]&gt; create table tb1</span><br><span class="line">    -&gt; (</span><br><span class="line">    -&gt; id int(4) not null,</span><br><span class="line">    -&gt; name char(10)</span><br><span class="line">    -&gt; );</span><br><span class="line">Query OK, 0 rows affected (0.01 sec)</span><br><span class="line">//这里忘了切换到 bookshop了</span><br></pre></td></tr></table></figure>
+<h4 id="创建新表"><a href="#创建新表" class="headerlink" title="创建新表"></a>创建新表</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">MariaDB [mysql]&gt; create table tb1</span><br><span class="line">    -&gt; (</span><br><span class="line">    -&gt; id int(4) not null,</span><br><span class="line">    -&gt; name char(10)</span><br><span class="line">    -&gt; );</span><br><span class="line">Query OK, 0 rows affected (0.01 sec)//这里忘了切换到 bookshop了</span><br></pre></td></tr></table></figure>
 <h4 id="未完"><a href="#未完" class="headerlink" title="未完"></a>未完</h4>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zjm5s.github.io/2018/01/14/MariaDB-MySQL的常用指令/" data-id="cjcejle390000wef6hmyfzcg1" class="article-share-link">Teilen</a>
+      <a data-url="http://zjm5s.github.io/2018/01/14/MariaDB-MySQL的常用指令/" data-id="cjcejqa3s00010wf6wqaiosqu" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SQL/">SQL</a></li></ul>
@@ -117,7 +117,7 @@
   
   
     <a href="/2018/01/11/脚本初学应用/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Älter</strong>
+      <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">脚本初学应用</div>
     </a>
   
@@ -154,7 +154,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archiv</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a></li></ul>
     </div>
@@ -164,7 +164,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">letzter Beitrag</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
