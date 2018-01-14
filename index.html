@@ -98,13 +98,13 @@
 <h4 id="列出所有表"><a href="#列出所有表" class="headerlink" title="列出所有表"></a>列出所有表</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">MariaDB [mysql]&gt; show tables</span><br><span class="line">    -&gt; ;</span><br></pre></td></tr></table></figure>
 <h4 id="查看表的字段"><a href="#查看表的字段" class="headerlink" title="查看表的字段"></a>查看表的字段</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">MariaDB [mysql]&gt; desc func</span><br><span class="line">    -&gt; ;</span><br><span class="line">+-------+------------------------------+------+-----+---------+-------+</span><br><span class="line">| Field | Type                         | Null | Key | Default | Extra |</span><br><span class="line">+-------+------------------------------+------+-----+---------+-------+</span><br><span class="line">| name  | char(64)                     | NO   | PRI |         |       |</span><br><span class="line">| ret   | tinyint(1)                   | NO   |     | 0       |       |</span><br><span class="line">| dl    | char(128)                    | NO   |     |         |       |</span><br><span class="line">| type  | enum(&apos;function&apos;,&apos;aggregate&apos;) | NO   |     | NULL    |       |</span><br><span class="line">+-------+------------------------------+------+-----+---------+-------+</span><br><span class="line">4 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
 <h4 id="查看表结构-创建表时的详细语句"><a href="#查看表结构-创建表时的详细语句" class="headerlink" title="查看表结构(创建表时的详细语句)"></a>查看表结构(创建表时的详细语句)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MariaDB [mysql]&gt; show create table func;</span><br></pre></td></tr></table></figure>
-<h4 id="创建一个数据库"><a href="#创建一个数据库" class="headerlink" title="创建一个数据库"></a>创建一个数据库</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">MariaDB [mysql]&gt; create database bookshop;</span><br><span class="line">Query OK, 1 row affected (0.00 sec)</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">#### 创建新表</span><br></pre></td></tr></table></figure>
-<p>MariaDB [mysql]&gt; create table tb1<br>    -&gt; (<br>    -&gt; id int(4) not null,<br>    -&gt; name char(10)<br>    -&gt; );<br>Query OK, 0 rows affected (0.01 sec)<br>//这里忘了切换到 bookshop了<br>```</p>
+<h4 id="创建一个数据库"><a href="#创建一个数据库" class="headerlink" title="创建一个数据库"></a>创建一个数据库</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">MariaDB [mysql]&gt; create database bookshop;</span><br><span class="line">Query OK, 1 row affected (0.00 sec)</span><br></pre></td></tr></table></figure>
+<h4 id="创建新表"><a href="#创建新表" class="headerlink" title="创建新表"></a>创建新表</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">MariaDB [mysql]&gt; create table tb1</span><br><span class="line">    -&gt; (</span><br><span class="line">    -&gt; id int(4) not null,</span><br><span class="line">    -&gt; name char(10)</span><br><span class="line">    -&gt; );</span><br><span class="line">Query OK, 0 rows affected (0.01 sec)</span><br><span class="line">//这里忘了切换到 bookshop了</span><br></pre></td></tr></table></figure>
 <h4 id="未完"><a href="#未完" class="headerlink" title="未完"></a>未完</h4>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zjm5s.github.io/2018/01/14/MariaDB-MySQL的常用指令/" data-id="cjcejfy3q0000q6f6oemm68ec" class="article-share-link">Teilen</a>
+      <a data-url="http://zjm5s.github.io/2018/01/14/MariaDB-MySQL的常用指令/" data-id="cjcejle390000wef6hmyfzcg1" class="article-share-link">Teilen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SQL/">SQL</a></li></ul>
@@ -146,7 +146,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zjm5s.github.io/2018/01/11/脚本初学应用/" data-id="cjcejfy470005q6f67eo7fva6" class="article-share-link">Teilen</a>
+      <a data-url="http://zjm5s.github.io/2018/01/11/脚本初学应用/" data-id="cjcejle3t0008wef6665e9i1r" class="article-share-link">Teilen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell-script/">shell-script</a></li></ul>
@@ -188,7 +188,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zjm5s.github.io/2018/01/09/为笔记本换一颗强劲的i7/" data-id="cjcejfy3x0001q6f6gow0r04j" class="article-share-link">Teilen</a>
+      <a data-url="http://zjm5s.github.io/2018/01/09/为笔记本换一颗强劲的i7/" data-id="cjcejle3p0004wef6boiqre1o" class="article-share-link">Teilen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记本/">笔记本</a></li></ul>
@@ -230,7 +230,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zjm5s.github.io/2018/01/04/医院之行/" data-id="cjcejfy430003q6f6lns7sgoo" class="article-share-link">Teilen</a>
+      <a data-url="http://zjm5s.github.io/2018/01/04/医院之行/" data-id="cjcejle3r0005wef629hi9g3i" class="article-share-link">Teilen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/琐事/">琐事</a></li></ul>
@@ -273,7 +273,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zjm5s.github.io/2018/01/03/Arch-安装记录/" data-id="cjcejfy450004q6f68fl2jy8n" class="article-share-link">Teilen</a>
+      <a data-url="http://zjm5s.github.io/2018/01/03/Arch-安装记录/" data-id="cjcejle3h0001wef6xxvholdv" class="article-share-link">Teilen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Arch-Linux/">Arch Linux</a></li></ul>
@@ -325,7 +325,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zjm5s.github.io/2018/01/02/hexo的使用/" data-id="cjcejfy4a0008q6f6y2lv8qpa" class="article-share-link">Teilen</a>
+      <a data-url="http://zjm5s.github.io/2018/01/02/hexo的使用/" data-id="cjcejle3n0003wef6gilyglnf" class="article-share-link">Teilen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
