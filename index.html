@@ -69,6 +69,53 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-MariaDB-MySQL的常用指令" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/01/14/MariaDB-MySQL的常用指令/" class="article-date">
+  <time datetime="2018-01-14T08:10:36.000Z" itemprop="datePublished">2018-01-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/14/MariaDB-MySQL的常用指令/">MariaDB/MySQL的常用指令</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>逆水行舟，不进则退。数据库的sql增删查改都生疏了，那还了得，在这里记一下吧。</p>
+<h4 id="以root用户登陆"><a href="#以root用户登陆" class="headerlink" title="以root用户登陆"></a>以root用户登陆</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
+<h4 id="查看所有数据库"><a href="#查看所有数据库" class="headerlink" title="查看所有数据库"></a>查看所有数据库</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">MariaDB [(none)]&gt; show databases;</span><br><span class="line">+--------------------+</span><br><span class="line">| Database           |</span><br><span class="line">+--------------------+</span><br><span class="line">| information_schema |</span><br><span class="line">| mysql              |</span><br><span class="line">| performance_schema |</span><br><span class="line">+--------------------+</span><br><span class="line">3 rows in set (0.01 sec)</span><br></pre></td></tr></table></figure>
+<h4 id="使用一个数据库"><a href="#使用一个数据库" class="headerlink" title="使用一个数据库"></a>使用一个数据库</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">MariaDB [(none)]&gt; use mysql</span><br><span class="line">Database changed</span><br></pre></td></tr></table></figure>
+<h4 id="列出所有表"><a href="#列出所有表" class="headerlink" title="列出所有表"></a>列出所有表</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">MariaDB [mysql]&gt; show tables</span><br><span class="line">    -&gt; ;</span><br></pre></td></tr></table></figure>
+<h4 id="查看表的字段"><a href="#查看表的字段" class="headerlink" title="查看表的字段"></a>查看表的字段</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">MariaDB [mysql]&gt; desc func</span><br><span class="line">    -&gt; ;</span><br><span class="line">+-------+------------------------------+------+-----+---------+-------+</span><br><span class="line">| Field | Type                         | Null | Key | Default | Extra |</span><br><span class="line">+-------+------------------------------+------+-----+---------+-------+</span><br><span class="line">| name  | char(64)                     | NO   | PRI |         |       |</span><br><span class="line">| ret   | tinyint(1)                   | NO   |     | 0       |       |</span><br><span class="line">| dl    | char(128)                    | NO   |     |         |       |</span><br><span class="line">| type  | enum(&apos;function&apos;,&apos;aggregate&apos;) | NO   |     | NULL    |       |</span><br><span class="line">+-------+------------------------------+------+-----+---------+-------+</span><br><span class="line">4 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+<h4 id="查看表结构-创建表时的详细语句"><a href="#查看表结构-创建表时的详细语句" class="headerlink" title="查看表结构(创建表时的详细语句)"></a>查看表结构(创建表时的详细语句)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MariaDB [mysql]&gt; show create table func;</span><br></pre></td></tr></table></figure>
+<h4 id="创建一个数据库"><a href="#创建一个数据库" class="headerlink" title="创建一个数据库"></a>创建一个数据库</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">MariaDB [mysql]&gt; create database bookshop;</span><br><span class="line">Query OK, 1 row affected (0.00 sec)</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">#### 创建新表</span><br></pre></td></tr></table></figure>
+<p>MariaDB [mysql]&gt; create table tb1<br>    -&gt; (<br>    -&gt; id int(4) not null,<br>    -&gt; name char(10)<br>    -&gt; );<br>Query OK, 0 rows affected (0.01 sec)<br>//这里忘了切换到 bookshop了<br>```</p>
+<h4 id="未完"><a href="#未完" class="headerlink" title="未完"></a>未完</h4>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://zjm5s.github.io/2018/01/14/MariaDB-MySQL的常用指令/" data-id="cjcejfy3q0000q6f6oemm68ec" class="article-share-link">Teilen</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SQL/">SQL</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-脚本初学应用" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/01/11/脚本初学应用/" class="article-date">
@@ -91,7 +138,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>给笔记本换ssd时，又免不了重装系统，每次都要走一遍arch的安装过程，就感觉很low，于是我去学了点shell-script，用来自动安装系统。</p>
+        <p>给笔记本换ssd时，又免不了重装系统，每次都要走一遍archjkjlkjkj安装过程，就感觉很low，于是我去学了点shell-script，用来自动安装系统。</p>
 <p>目前在虚拟机试了一次，效果还行，也存在不足，不是完全配置、需要分三步等。</p>
 <p>首先获得脚本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># wget https://raw.githubusercontent.com/zjm5s/shell-script/master/arch-setup-extra.sh https://raw.githubusercontent.com/zjm5s/shell-script/master/arch-setup.sh https://raw.githubusercontent.com/zjm5s/shell-script/master/arch-install.sh</span><br><span class="line"># chmod +x *.sh</span><br></pre></td></tr></table></figure></p>
 <p>第一次执行 arch-install，第二次执行 arch-setup.sh，重启后第三次执行 arch-setup-extra.sh</p>
@@ -99,9 +146,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zjm5s.github.io/2018/01/11/脚本初学应用/" data-id="cjca3r0mf0003kgf6xn3lhhlf" class="article-share-link">Teilen</a>
+      <a data-url="http://zjm5s.github.io/2018/01/11/脚本初学应用/" data-id="cjcejfy470005q6f67eo7fva6" class="article-share-link">Teilen</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell-script/">shell-script</a></li></ul>
+
     </footer>
   </div>
   
@@ -139,7 +188,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zjm5s.github.io/2018/01/09/为笔记本换一颗强劲的i7/" data-id="cjca3r0m10000kgf6r5k8mq1c" class="article-share-link">Teilen</a>
+      <a data-url="http://zjm5s.github.io/2018/01/09/为笔记本换一颗强劲的i7/" data-id="cjcejfy3x0001q6f6gow0r04j" class="article-share-link">Teilen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记本/">笔记本</a></li></ul>
@@ -181,7 +230,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zjm5s.github.io/2018/01/04/医院之行/" data-id="cjca3r0mj0005kgf6a6qoxskh" class="article-share-link">Teilen</a>
+      <a data-url="http://zjm5s.github.io/2018/01/04/医院之行/" data-id="cjcejfy430003q6f6lns7sgoo" class="article-share-link">Teilen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/琐事/">琐事</a></li></ul>
@@ -224,7 +273,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zjm5s.github.io/2018/01/03/Arch-安装记录/" data-id="cjca3r0m90001kgf69i3kyamv" class="article-share-link">Teilen</a>
+      <a data-url="http://zjm5s.github.io/2018/01/03/Arch-安装记录/" data-id="cjcejfy450004q6f68fl2jy8n" class="article-share-link">Teilen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Arch-Linux/">Arch Linux</a></li></ul>
@@ -276,7 +325,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zjm5s.github.io/2018/01/02/hexo的使用/" data-id="cjca3r0mh0004kgf68488so91" class="article-share-link">Teilen</a>
+      <a data-url="http://zjm5s.github.io/2018/01/02/hexo的使用/" data-id="cjcejfy4a0008q6f6y2lv8qpa" class="article-share-link">Teilen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
@@ -301,7 +350,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Arch-Linux/">Arch Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/琐事/">琐事</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记本/">笔记本</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Arch-Linux/">Arch Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQL/">SQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell-script/">shell-script</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/琐事/">琐事</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记本/">笔记本</a></li></ul>
     </div>
   </div>
 
@@ -311,7 +360,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Arch-Linux/" style="font-size: 10px;">Arch Linux</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/琐事/" style="font-size: 10px;">琐事</a> <a href="/tags/笔记本/" style="font-size: 10px;">笔记本</a>
+      <a href="/tags/Arch-Linux/" style="font-size: 10px;">Arch Linux</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/shell-script/" style="font-size: 10px;">shell-script</a> <a href="/tags/琐事/" style="font-size: 10px;">琐事</a> <a href="/tags/笔记本/" style="font-size: 10px;">笔记本</a>
     </div>
   </div>
 
@@ -333,6 +382,10 @@
       <ul>
         
           <li>
+            <a href="/2018/01/14/MariaDB-MySQL的常用指令/">MariaDB/MySQL的常用指令</a>
+          </li>
+        
+          <li>
             <a href="/2018/01/11/脚本初学应用/">脚本初学应用</a>
           </li>
         
@@ -346,10 +399,6 @@
         
           <li>
             <a href="/2018/01/03/Arch-安装记录/">Arch的安装记录</a>
-          </li>
-        
-          <li>
-            <a href="/2018/01/02/hexo的使用/">hexo的使用</a>
           </li>
         
       </ul>
